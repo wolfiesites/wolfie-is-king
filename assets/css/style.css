@@ -1,0 +1,66 @@
+.sk_tab_content { opacity: 0; }
+
+.sk_tab_content.animated { opacity: 1; }
+
+.sk_vertical_timeline .timeline-window > div { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 150px; }
+
+.sk_vertical_timeline .timeline-window > div > div { width: 100%; }
+
+.sk_vertical_timeline .timeline-window > div .timeline-bar { width: 5px; background: #c1c1c1; margin: 0px 40px; position: relative; border: none; }
+
+.sk_vertical_timeline .timeline-window > div .timeline-bar .timeline-point { position: absolute; margin: auto; top: 0px; width: 20px; height: 20px; background: #c1c1c1; z-index: 20; border-radius: 50%; margin-left: -8px; border: 1px solid black; }
+
+.sk_vertical_timeline .timeline-window > div .sk_tab_content { text-align: right; }
+
+.sk_vertical_timeline .timeline-window > div .sk_tab_content h3 { text-align: right; margin-top: -5px; }
+
+.sk_vertical_timeline .timeline-window > div .sk_tab_content p { font-weight: 100; }
+
+.sk_vertical_timeline .timeline-window > div:nth-child(odd) .empty-col { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
+
+.sk_vertical_timeline .timeline-window > div:nth-child(odd) .timeline-bar { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
+
+.sk_vertical_timeline .timeline-window > div:nth-child(odd) .sk_tab_content { -webkit-box-ordinal-group: 4; -ms-flex-order: 3; order: 3; text-align: left; }
+
+.sk_vertical_timeline .timeline-window > div:nth-child(odd) .sk_tab_content h3 { text-align: left; }
+
+.sk_vertical_timeline .timeline-window > div:last-child .timeline-bar { background: transparent !important; }
+
+.sk_download_list .file-row { border: 1px solid grey; display: -webkit-box !important; display: -ms-flexbox !important; display: flex !important; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 20px 20px; }
+
+.sk_download_list .file-row .icon-wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.sk_download_list .file-row .icon-wrapper p { margin: 0; }
+
+.sk_download_list .file-row .icon-wrapper i { margin-right: 15px; }
+
+.sk_download_list .file-row .button-wrapper .btn { background: black; border-radius: 0px; color: white; }
+
+.subtitle-wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin: 20px 0px; width: 100%; }
+
+.subtitle-wrapper .subtitle-inner { min-width: 400px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.subtitle-wrapper .subtitle-inner .subtitle-header { text-transform: uppercase; font-size: 22px; font-weight: 100; margin: 0px; letter-spacing: 2px; padding: 0 40px; }
+
+.subtitle-wrapper .subtitle-inner .subtitle-line { width: 80px; height: 2px; border-radius: 5px; }
+
+@media screen and (max-width: 480px) { .sk_vertical_timeline .timeline-window > div { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 150px; }
+
+.sk_vertical_timeline .timeline-window > div > div { width: 100%; }
+
+.sk_vertical_timeline .timeline-window > div .timeline-bar { width: 5px; background: #F5B11E; margin: 0px 20px; position: relative; }
+
+.sk_vertical_timeline .timeline-window > div .timeline-bar .timeline-point { position: absolute; margin: auto; top: 0px; width: 20px; height: 20px; background: #F5B11E; z-index: 20; border-radius: 50%; margin-left: -8px; border: 2px solid white; }
+
+.sk_vertical_timeline .timeline-window > div .sk_tab_content { text-align: right; }
+
+.sk_vertical_timeline .timeline-window > div .sk_tab_content h3 { text-align: right; }
+
+.sk_vertical_timeline .timeline-window > div .empty-col { display: none; }
+
+.sk_vertical_timeline .timeline-window > div .timeline-bar { -webkit-box-ordinal-group: 3 !important; -ms-flex-order: 2 !important; order: 2 !important; background: #c1c1c1; }
+
+.sk_vertical_timeline .timeline-window > div .sk_tab_content { -webkit-box-ordinal-group: 2 !important; -ms-flex-order: 1 !important; order: 1 !important; text-align: left; }
+
+.sk_vertical_timeline .timeline-window > div .sk_tab_content h3 { text-align: left; } }
+

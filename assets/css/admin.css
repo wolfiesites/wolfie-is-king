@@ -1,0 +1,11 @@
+.skicon {
+	background-image: url('../images/spero-icons.png') !important;
+	background-size: 80px 60px !important;
+	background-position: -3px 0 !important;
+}
+.sk_icon_timeline {
+	background-image: url('../images/timeline.png') !important;
+}
+.sk_icon_icon_list {
+	background-image: url('../images/iconlist.png') !important;
+}

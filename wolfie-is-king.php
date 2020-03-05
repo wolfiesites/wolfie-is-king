@@ -32,11 +32,13 @@ class Wolfie_is_king
 
     public function wolfie_king_extend_base_shortcodes(){
 
-     global $kc;
+        if(class_exists('KingComposer')) {
 
-     $kc->set_template_path( plugin_dir_path( __FILE__ ) . '/kingcomposer/');
+           global $kc;
 
-     $kc->add_map_param(
+           $kc->set_template_path( plugin_dir_path( __FILE__ ) . '/kingcomposer/');
+
+           $kc->add_map_param(
         'kc_carousel_post', //element slug - shortcode tag name
         array( //param infomations
         	'type'			=> 'dropdown',
@@ -53,12 +55,14 @@ class Wolfie_is_king
 	);    
 
 //inlcude shorcodes mapping
-     foreach (new DirectoryIterator( plugin_dir_path( __FILE__ ) . '/shortcodes_map' ) as $fileInfo) {
-        if($fileInfo->isDot()) continue;
-        $filename =  $fileInfo->getFilename();
+           foreach (new DirectoryIterator( plugin_dir_path( __FILE__ ) . '/shortcodes_map' ) as $fileInfo) {
+            if($fileInfo->isDot()) continue;
+            $filename =  $fileInfo->getFilename();
 
-        include(plugin_dir_path( __FILE__ ) . '/shortcodes_map/' . $filename);
+            include(plugin_dir_path( __FILE__ ) . '/shortcodes_map/' . $filename);
+        }
     }
+
 }
 
 }

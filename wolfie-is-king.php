@@ -34,11 +34,11 @@ class Wolfie_is_king
 
         if(class_exists('KingComposer')) {
 
-           global $kc;
+         global $kc;
 
-           $kc->set_template_path( plugin_dir_path( __FILE__ ) . '/kingcomposer/');
+         $kc->set_template_path( plugin_dir_path( __FILE__ ) . '/kingcomposer/');
 
-           $kc->add_map_param(
+         $kc->add_map_param(
         'kc_carousel_post', //element slug - shortcode tag name
         array( //param infomations
         	'type'			=> 'dropdown',
@@ -55,13 +55,23 @@ class Wolfie_is_king
 	);    
 
 //inlcude shorcodes mapping
-           foreach (new DirectoryIterator( plugin_dir_path( __FILE__ ) . '/shortcodes_map' ) as $fileInfo) {
+         foreach (new DirectoryIterator( plugin_dir_path( __FILE__ ) . '/shortcodes_map' ) as $fileInfo) {
             if($fileInfo->isDot()) continue;
             $filename =  $fileInfo->getFilename();
 
             include(plugin_dir_path( __FILE__ ) . '/shortcodes_map/' . $filename);
         }
-    }
+    } else {
+        function general_admin_notice(){
+            global $pagenow;
+            if ( $pagenow == 'plugins.php' ) {
+               echo '<div class="notice notice-warning is-dismissible">
+               <p>In order to work "Wolfie is King" needs KingComposer to work. Please download KingComposer from <a href="'.admin_url('').'/plugin-install.php?s=kingcomposer&tab=search&type=term">here</a></p>
+               </div>';
+           }
+       }
+       add_action('admin_notices', 'general_admin_notice');
+   }
 
 }
 

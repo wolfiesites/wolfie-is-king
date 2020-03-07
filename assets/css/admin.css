@@ -9,6 +9,6 @@
 .sk_icon_icon_list {
 	background-image: url('../images/iconlist.png') !important;
 }
-.kc-params-popup.kc-elm-settings-popup {
-	z-index: 999 !important;
+.mce-popover, .mce-container.mce-panel {
+z-index: 110100 !important;
 }

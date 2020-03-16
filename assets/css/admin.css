@@ -10,5 +10,8 @@
 	background-image: url('../images/iconlist.png') !important;
 }
 .mce-popover, .mce-container.mce-panel {
-z-index: 110100 !important;
+	z-index: 110100 !important;
+}
+#wpadminbar {
+	z-index: 999999!important;
 }

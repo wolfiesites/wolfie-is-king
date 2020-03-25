@@ -8,4 +8,6 @@ In order to add ur own custom shortcodes:
 1. Map shortcode: (plugin directory) -> wolfie-is-king -> shortcodes_map/
 2. handle front end of your shortcode: (plugin directory) -> wolfie-is-king -> kingcomposer/
 
-enjoy
+You can use it to extend KINGCOMPOSER easly.
+
+Enjoy

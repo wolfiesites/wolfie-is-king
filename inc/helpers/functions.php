@@ -18,3 +18,13 @@ function spero_king_append_dependency( $handle, $dep ){
 
     return true;
 }
+
+// in kc sections define section and include it using this function like: echo kc_get_template($template_slug);
+function kc_get_template($slug) {
+    $template = get_page_by_path($slug, OBJECT, 'kc-section');
+    $raw_kc_content = get_post_meta($template->ID, 'kc_raw_content', true); 
+
+    // TODOpw: nie wiem czemu nie wspópracuje ze skryptami kingcomposer'a :( i nie rozciąga contentu :(
+
+    return do_shortcode($raw_kc_content);
+}

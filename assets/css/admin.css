@@ -24,6 +24,15 @@
 .sk_icon_the_featured_img {
 	background-image: url('../images/the-featured-img.png') !important;
 }
+.sk_icon_the_posted_on {
+	background-image: url('../images/the-posted-on.png') !important;
+}
+.sk_icon_the_author {
+	background-image: url('../images/the-author.png') !important;
+}
+.sk_icon_the_category {
+	background-image: url('../images/the-category.png') !important;
+}
 .mce-popover, .mce-container.mce-panel {
 	z-index: 110100 !important;
 }

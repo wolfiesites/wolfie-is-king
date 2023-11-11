@@ -33,6 +33,12 @@
 .sk_icon_the_category {
 	background-image: url('../images/the-category.png') !important;
 }
+.sk_icon_the_excerpt {
+	background-image: url('../images/the-excerpt.png') !important;
+}
+.sk_icon_breadcrumbs {
+	background-image: url('../images/breadcrumbs.png') !important;
+}
 .mce-popover, .mce-container.mce-panel {
 	z-index: 110100 !important;
 }

@@ -9,6 +9,21 @@
 .sk_icon_icon_list {
 	background-image: url('../images/iconlist.png') !important;
 }
+.sk_icon_template-tag-content {
+	background-image: url('../images/content.png') !important;
+}
+.sk_icon_wolfie {
+	background-image: url('../images/wolfie.png') !important;
+}
+.sk_icon_content {
+	background-image: url('../images/the-content.png') !important;
+}
+.sk_icon_the_title {
+	background-image: url('../images/the-title.png') !important;
+}
+.sk_icon_the_featured_img {
+	background-image: url('../images/the-featured-img.png') !important;
+}
 .mce-popover, .mce-container.mce-panel {
 	z-index: 110100 !important;
 }

@@ -1,11 +1,12 @@
 <?php 
 extract($atts);
+$prefix = $atts['wolfie_template_tag_the_posted_on__prefix'];
 
 if ( ! function_exists( 'wolfie_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
-	function wolfie_posted_on() {
+	function wolfie_posted_on($prefix) {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -20,7 +21,7 @@ if ( ! function_exists( 'wolfie_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'morelewska' ),
+			esc_html_x( $prefix.' %s', 'post date', 'morelewska' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -29,6 +30,6 @@ if ( ! function_exists( 'wolfie_posted_on' ) ) :
 	}
 endif;
 
-wolfie_posted_on();
+wolfie_posted_on($prefix);
 
 ?>

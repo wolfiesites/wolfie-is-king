@@ -12,14 +12,14 @@ if (function_exists('kc_add_map')) {
 				'category' => 'wolfie template tags',
 				'css_box' => true,
 				"params"  => array(
-					// array(
-					// 	"name" => "subtitle-title",
-					// 	"label" => "subtitle title",
-					// 	"value" => "",
-					// 	"type" => "text",
-					// 	"admin_label" => true,
-					// 	"description" => "",
-					// ),
+					array(
+						"name" => "wolfie_template_tag_the_posted_on__prefix",
+						"label" => "prefix text before date",
+						"value" => "Posted on",
+						"type" => "text",
+						"admin_label" => true,
+						"description" => "",
+					),
 					// array(
 					// 	"name" => "line-color",
 					// 	"label" => "Color of Lines",

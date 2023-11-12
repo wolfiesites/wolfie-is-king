@@ -15,12 +15,17 @@ function spero_king_append_dependency( $handle, $dep ){
 }
 
 function kc_minify_css($css) {
-    $css = preg_replace('/\/\*.*?\*\//s', '', $css); // Remove comments
-    $css = preg_replace('/\s+/', ' ', $css); // Remove extra spaces
-    $css = preg_replace('/\s?([,:;{}])\s?/', '$1', $css); // Remove spaces around delimiters
+    // Remove comments
+    $css = preg_replace('/\/\*.*?\*\//s', '', $css);
+
+    // Remove new lines and extra spaces
+    $css = preg_replace('/\s+/', ' ', $css);
+
+    // Remove spaces around delimiters
+    $css = preg_replace('/\s?([,:;{}])\s?/', '$1', $css);
+
     return $css;
 }
-
 // in kc sections define section and include it using this function like: kc_get_template($template_slug);
 function kc_get_template($slug) {
     global $kc_front;
@@ -32,10 +37,10 @@ function kc_get_template($slug) {
     // css templatki
     $css_of_template = get_post_meta($template_id, 'kc_data', true)['css'];
     // merge css template and post template
-    $kc_front->add_header_css($css_of_template); // dodaje niby css do instancji ale już po wyrenderowaniu css, hmm jak wyrenderować nowy css ?
+    $kc_front->add_header_css(kc_minify_css($css_of_template)); 
     $kc_global_css = kc_minify_css($kc_front->get_global_css()); // mam css tego wpisu,
     // append and render template style
-    $kc_front->front_head(kc_minify_css($css_of_template));
+    $kc_front->front_head(kc_minify_css($css_of_template)); // renderuję wcześniej dodany styl templatki
 
     $raw_kc_content = get_post_meta($template->ID, 'kc_raw_content', true); 
     echo $kc_front->do_shortcode('<div class="kc_clfw"></div>'.$raw_kc_content); // pierwszy człon naprawia kingcomposer'a layout strech templatki

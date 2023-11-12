@@ -6,7 +6,7 @@ if (function_exists('kc_add_map')) {
 				'name'		  => __(' the title', 'kingcomposer'),
 				// 'description' => __(' Heading titles H(n) Tag', 'kingcomposer'),
 				'icon'		  => 'skicon sk_icon_the_title',
-				'category'	  => 'wolfie template tag',
+				'category'	  => 'wolfie template tags',
 				'priority'  => 210,
 				// 'live_editor' => $live_tmpl.'kc_title.php',
 				'params'	  => array(

@@ -11,6 +11,7 @@ Text Domain: wolfie
 
 //include helpers
 include( plugin_dir_path( __FILE__ ) . '/inc/helpers/functions.php' );
+include( plugin_dir_path( __FILE__ ) . '/inc/custom-param-types.php' );
 
 class Wolfie_is_king 
 {

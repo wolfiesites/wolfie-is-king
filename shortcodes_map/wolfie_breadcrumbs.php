@@ -9,14 +9,14 @@ if (function_exists('kc_add_map')) {
 				'category' => 'wolfie',
 				'css_box' => true,
 				"params"  => array(
-					// array(
-					// 	"name" => "subtitle-title",
-					// 	"label" => "subtitle title",
-					// 	"value" => "",
-					// 	"type" => "text",
-					// 	"admin_label" => true,
-					// 	"description" => "",
-					// ),
+					array(
+						"name" => "info",
+						"label" => "<span style='color:red'>In order to use breadcrumbs you need \"yoast plugin\" installed and enabled breadcrumbs. To enable and configure breadcrumbs click <a href='/wp-admin/admin.php?page=wpseo_page_settings#/breadcrumbs'>here</a></span>",
+						"value" => "",
+						"type" => "info",
+						"admin_label" => true,
+						"description" => "",
+					),
 					// array(
 					// 	"name" => "line-color",
 					// 	"label" => "Color of Lines",

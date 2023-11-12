@@ -45,3 +45,6 @@
 #wpadminbar {
 	z-index: 999999!important;
 }
+.field-base-info input {
+	display:none !important;
+}

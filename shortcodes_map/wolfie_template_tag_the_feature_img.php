@@ -9,22 +9,22 @@ if (function_exists('kc_add_map')) {
 				'category' => 'wolfie template tags',
 				'css_box' => true,
 				"params"  => array(
-					// array(
-					// 	"name" => "subtitle-title",
-					// 	"label" => "subtitle title",
-					// 	"value" => "",
-					// 	"type" => "text",
-					// 	"admin_label" => true,
-					// 	"description" => "",
-					// ),
-					// array(
-					// 	"name" => "line-color",
-					// 	"label" => "Color of Lines",
-					// 	"value" => "#f5b11e",
-					// 	"type" => "color_picker",
-					// 	"admin_label" => false,
-					// 	"description" => "",
-					// ),
+					'general' => array(
+						array(
+							"name" => "default_featured_img",
+							"label" => "default image",
+							"value" => "",
+							"type" => "attach_image",
+							"admin_label" => true,
+							"description" => "choose image will be displayed when post doesn't have featured image",
+						)
+					),
+					'styling' => array(
+						array(
+							'name'    => 'css_custom',
+							'type'    => 'css'
+						)
+					),
 				)
 			)
 		)

@@ -1,5 +1,6 @@
 <?php
-$live_tmpl = '';
+
+$live_tmpl = KC_PATH.KDS.'shortcodes'.KDS.'live_editor'.KDS;
 
 $kc->add_map(
 	array(

@@ -1,4 +1,6 @@
 <?php
+$live_tmpl = '';
+
 $kc->add_map(
 	array(
 		'kc_row' => array(

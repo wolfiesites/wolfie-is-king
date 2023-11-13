@@ -9,13 +9,13 @@ Author URI: https://github.com/CommanderxDoge
 Text Domain: wolfie
 */
 
-//include helpers
-include( plugin_dir_path( __FILE__ ) . '/inc/helpers/functions.php' );
-include( plugin_dir_path( __FILE__ ) . '/inc/custom-param-types.php' );
 
 class Wolfie_is_king 
 {
     public function __construct() {
+        //include helpers
+        include( plugin_dir_path( __FILE__ ) . '/inc/helpers/functions.php' );
+        include( plugin_dir_path( __FILE__ ) . '/inc/custom-param-types.php' );
 
         add_action('init', array( $this ,'wolfie_king_extend_base_shortcodes' ), 99 );
         add_action('wp_enqueue_scripts', array( $this ,'wolfie_king_enqueue_front_scripts' ));
@@ -77,4 +77,10 @@ class Wolfie_is_king
 }
 
 }
-new Wolfie_is_king;
+
+if (class_exists('KingComposer')) {
+    new Wolfie_is_king;
+} else {
+    // add here wordpress notice to install kingcomposer in order to use wolfie is king
+}
+

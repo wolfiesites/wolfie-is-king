@@ -66,7 +66,7 @@ function kc_display_posts($template_card_slug) {
     
     if ($custom_query->have_posts()) :
         while ($custom_query->have_posts()) : $custom_query->the_post();
-            // post template, hmm.. to chyba nie jest najlepszy pomysł jednak, bo kc_row to section i markup jest bardzo skomplikowany
+
             kc_get_template($template_card_slug);
     
         endwhile;

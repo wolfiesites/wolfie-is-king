@@ -26,6 +26,7 @@ class Wolfie_is_king
         wp_enqueue_style( 'sk-front-style', plugin_dir_url(__FILE__) . '/assets/css/style.css');
         wp_enqueue_script( 'sk-main-js', plugin_dir_url(__FILE__) . '/assets/js/sk_main.js', array( 'jquery' ));
         wp_register_script( 'sk-waypoints', plugin_dir_url(__FILE__) . '/assets/js/lib/jquery.waypoints.min.js', array( 'jquery' ));
+        wp_register_script( 'kc-testimonial', plugin_dir_url(__FILE__) . '/assets/js/kc_testimonial.js', array( 'jquery' ));
     }
     public function wolfie_king_enqueue_admin_scripts(){
         wp_enqueue_style( 'sk-admin-style', plugin_dir_url(__FILE__) . '/assets/css/admin.css');
